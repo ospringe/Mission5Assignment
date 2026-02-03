@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Tutor Calculator";
+}
+
+<h1>Tutoring Cost Calculator</h1>
+<p>Enter how many hours of Google Snake tutoring you want, and I’ll tell you the total.</p>
+
+<div class="calc-container">
+
+    <!-- Hours input -->
+    <div class="calc-row">
+        <label for="hoursInput">Hours needed:</label>
+        <input type="number" id="hoursInput" min="0" step="0.5" placeholder="e.g., 2" />
+        <div id="hoursError" class="error-text" style="display:none;">
+            Please enter a positive number of hours.
+        </div>
+    </div>
+
+    <!-- Hourly rate (non-editable) -->
+    <div class="calc-row">
+        <label for="rateInput">Rate per hour ($):</label>
+        <input type="text" id="rateInput" value="234" readonly />
+    </div>
+
+    <!-- Calculate button -->
+    <div class="calc-row">
+        <button id="calcBtn" type="button">Calculate Total</button>
+    </div>
+
+    <!-- Total output -->
+    <div class="calc-row">
+        <label for="totalOutput">Total ($):</label>
+        <input type="text" id="totalOutput" readonly />
+    </div>
+
+    <!-- Navigation back to home -->
+    <div class="calc-row">
+        <a asp-controller="Home" asp-action="Index">← Back to Home</a>
+    </div>
+
+</div>
+
+<!-- This will be your jQuery file later -->
+<script src="~/js/calculator.js"></script>
