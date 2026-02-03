@@ -35,6 +35,10 @@ body {
   text-align: start;
 }
 
+.calc-title {
+  text-align: center;
+}
+
 .calc-container { 
   max-width: 520px; 
   margin: 0 auto; 
